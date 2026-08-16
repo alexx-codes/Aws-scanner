@@ -30,3 +30,25 @@ be easy to read at a glance.
 
 Note: Never commit AWS credentials. The .gitignore covers .env and
 .aws but double check before pushing.
+
+
+Example of Output:
+python AWScanner.py 
+Connected as: arn:aws:iam::$$$$$:user/user
+Account ID:  
+Bucket --
+PASS: aws-cloudtrail-logs- BlockPublicAcls is enabled
+PASS: aws-cloudtrail-logs- IgnorePublicAcls is enabled
+PASS: aws-cloudtrail-logs- BlockPublicPolicy is enabled
+PASS: aws-cloudtrail-logs- RestrictPublicBuckets is enabled
+PASS: aws-cloudtrail-logs- Encryption Enabled with AES256
+bucket
+PASS: aws-scanner-test-bucket BlockPublicAcls is enabled
+PASS: aws-scanner-test-bucket IgnorePublicAcls is enabled
+PASS: aws-scanner-test-bucket BlockPublicPolicy is enabled
+PASS: aws-scanner-test-bucket RestrictPublicBuckets is enabled
+PASS: aws-scanner-test-bucket Encryption Enabled with AES256
+User summary: 1
+Amount of MFADevices: 2
+PASS: Multi factor Authentication Enabled
+PASS: No Root access keys
