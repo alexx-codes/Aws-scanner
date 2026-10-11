@@ -1,0 +1,14 @@
+Account Setup
+
+I set up IAM Identity Center with a permission set for my user account with admin access, and I turned on MFA for it. The root user is not used for daily work.
+
+I made a separate IAM user called scanner just for this project, so the scanner never runs with admin rights.
+
+I set up a CloudTrail trail that logs management events (read and write) in all regions. The logs are encrypted with a KMS key, log file validation is on, and they go to S3 and CloudWatch Logs.
+
+I'm adding CloudWatch alarms for root account usage and EC2 launches, plus an AWS Budgets alert if my spending goes over $2.
+
+Why I set it up this way
+
+I wanted to separate my own access from the scanner's access, log everything that happens in the account, and get alerted when something unusual happens. 
+I turned on management events only, not data events, because data events cost extra and this is a personal account.
