@@ -1,5 +1,8 @@
 AWS Security Scanner
 
+The architecture diagram for the scanner
+![AWS scanner architecture](aws_scanner.png)
+
 A Python tool that scans an AWS account for common S3 misconfigurations.
 Built as a hands-on portfolio project to apply cloud security concepts in code.
 
